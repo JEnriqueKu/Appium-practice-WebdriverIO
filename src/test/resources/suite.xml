@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Android Automation Suite">
+    <test name="IO Test">
+        <classes>
+            <class name="tests.IOTest"/>
+        </classes>
+    </test>
+
+</suite>
