@@ -15,7 +15,7 @@ public class BaseScreen {
     AndroidDriver<AndroidElement> driver;
     FluentWait<AndroidDriver<AndroidElement>> wait;
 
-    public BaseScreen(AndroidDriver<AndroidElement> driver){
+    protected BaseScreen(AndroidDriver<AndroidElement> driver){
         this.driver=driver;
         this.wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(5))
@@ -25,20 +25,20 @@ public class BaseScreen {
         PageFactory.initElements(new AppiumFieldDecorator(driver),this);
     }
 
-    public AndroidDriver<AndroidElement> getDriver() {
+    protected AndroidDriver<AndroidElement> getDriver() {
         return driver;
     }
 
-    public FluentWait<AndroidDriver<AndroidElement>> getWait() {
+    protected FluentWait<AndroidDriver<AndroidElement>> getWait() {
         return this.wait;
     }
 
-    public void clickOnElement(AndroidElement element){
+    protected void clickOnElement(AndroidElement element){
         getWait().until(ExpectedConditions.elementToBeClickable(element));
         element.click();
     }
 
-    public boolean elementIsVisible(AndroidElement element){
+    protected boolean elementIsVisible(AndroidElement element){
         getWait().until(ExpectedConditions.visibilityOf(element));
         return element.isDisplayed();
     }

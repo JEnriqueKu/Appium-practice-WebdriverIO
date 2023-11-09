@@ -11,7 +11,7 @@ public class SwipeScreen extends BaseScreen {
     }
 
     @AndroidFindBy(uiAutomator = ".className(\"android.widget.TextView\").text(\"Swipe horizontal\")")
-    AndroidElement swipeMessage;
+    private AndroidElement swipeMessage;
 
     public boolean swipeMessageIsDisplayed() {
         return elementIsVisible(swipeMessage);

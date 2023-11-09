@@ -11,7 +11,7 @@ public class DragScreen extends BaseScreen {
     }
 
     @AndroidFindBy(uiAutomator = ".className(\"android.widget.TextView\").text(\"Drag and Drop\")")
-    AndroidElement dragMessage;
+    private AndroidElement dragMessage;
 
     public boolean dragMessageIsDisplayed() {
         return elementIsVisible(dragMessage);
