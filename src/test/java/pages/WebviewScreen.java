@@ -11,7 +11,7 @@ public class WebviewScreen extends BaseScreen {
     }
 
 
-    @AndroidFindBy(uiAutomator = ".className(\"android.view.View\").text(\"Next-gen browser and mobile automation test framework for Node.js\")")
+    @AndroidFindBy(uiAutomator = ".className(\"android.view.View\").textContains(\"Next-gen browser\")")
     private AndroidElement webviewMessage;
 
     public boolean webviewMessageIsDisplayed() {

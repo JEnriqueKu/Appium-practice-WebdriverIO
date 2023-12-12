@@ -13,7 +13,14 @@ public class SwipeScreen extends BaseScreen {
     @AndroidFindBy(uiAutomator = ".className(\"android.widget.TextView\").text(\"Swipe horizontal\")")
     private AndroidElement swipeMessage;
 
+    @AndroidFindBy(uiAutomator = ".className(\"android.widget.TextView\").text(\"FULLY OPEN SOURCE\")")
+    private AndroidElement cart1;
+
     public boolean swipeMessageIsDisplayed() {
         return elementIsVisible(swipeMessage);
+    }
+
+    public void swipeToTheRightCart1(){
+        swipeToTheRight(cart1);
     }
 }
