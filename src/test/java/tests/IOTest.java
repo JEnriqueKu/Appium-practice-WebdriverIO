@@ -66,7 +66,11 @@ public class IOTest extends BaseTest {
         MenuBar menuBar = loadMenuBar();
         SwipeScreen swipeScreen = menuBar.clickOnSwipe();
 
-        swipeScreen.swipeToTheRightCart1();
+        softAssert.assertTrue(swipeScreen.gitCardIsVisible());
+        swipeScreen.swipeRightCarousel();
+        softAssert.assertTrue(swipeScreen.communityCardIsVisible());
 
+        swipeScreen.swipeLeftCarousel();
+        softAssert.assertTrue(swipeScreen.gitCardIsVisible());
     }
 }
